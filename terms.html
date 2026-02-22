@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DealSafe — Terms of Service</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #FAFAF8;
+      --surface: #FFFFFF;
+      --text-primary: #1A1A1A;
+      --text-secondary: #5A5A58;
+      --text-muted: #8A8A86;
+      --accent: #1B6B4A;
+      --accent-light: #E8F5EE;
+      --border: #E8E8E4;
+    }
+
+    html { font-size: 16px; scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 1.25rem 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+      background: rgba(255,255,255,0.92);
+    }
+
+    .header-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-decoration: none;
+      color: var(--text-primary);
+    }
+
+    .logo-icon {
+      width: 32px;
+      height: 32px;
+      background: var(--accent);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: -0.5px;
+    }
+
+    .logo-text {
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: 1.15rem;
+      letter-spacing: -0.3px;
+    }
+
+    .header-badge {
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      background: var(--bg);
+      padding: 0.3rem 0.65rem;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+    }
+
+    .hero {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 3.5rem 1.5rem 2.5rem;
+    }
+
+    .hero h1 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(2rem, 5vw, 2.75rem);
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+    }
+
+    .hero .effective-date {
+      margin-top: 0.75rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .hero .intro {
+      margin-top: 1.25rem;
+      font-size: 1.02rem;
+      color: var(--text-secondary);
+      max-width: 580px;
+      line-height: 1.75;
+    }
+
+    .content {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 1.5rem 4rem;
+    }
+
+    .section {
+      margin-bottom: 2.5rem;
+    }
+
+    .section h2 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      letter-spacing: -0.2px;
+      color: var(--text-primary);
+      margin-bottom: 0.9rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section p {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      margin-bottom: 0.9rem;
+      line-height: 1.75;
+    }
+
+    .section ul {
+      list-style: none;
+      margin: 0.75rem 0 1rem;
+      padding: 0;
+    }
+
+    .section ul li {
+      position: relative;
+      padding-left: 1.4rem;
+      margin-bottom: 0.55rem;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.65;
+    }
+
+    .section ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.6rem;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--accent);
+      opacity: 0.5;
+    }
+
+    .highlight-box {
+      background: var(--accent-light);
+      border: 1px solid #C4E2D2;
+      border-left: 3px solid var(--accent);
+      border-radius: 8px;
+      padding: 1.25rem 1.5rem;
+      margin: 1.25rem 0;
+    }
+
+    .highlight-box p {
+      color: var(--text-primary);
+      font-weight: 500;
+      font-size: 0.92rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .highlight-box p:last-child { margin-bottom: 0; }
+    .highlight-box strong { color: var(--accent); }
+
+    .footer {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 3rem;
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .footer-copy {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .section a { color: var(--accent); }
+
+    @media (max-width: 480px) {
+      .hero { padding-top: 2.5rem; }
+      .hero h1 { font-size: 1.75rem; }
+      .section h2 { font-size: 1.15rem; }
+      .highlight-box { padding: 1rem 1.15rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-inner">
+      <a href="#" class="logo">
+        <div class="logo-icon">DS</div>
+        <span class="logo-text">DealSafe</span>
+      </a>
+      <span class="header-badge">Legal</span>
+    </div>
+  </header>
+
+  <div class="hero">
+    <h1>Terms of Service</h1>
+    <p class="effective-date">Effective Date: February 22, 2026</p>
+    <p class="intro">
+      Please read these Terms of Service carefully before using DealSafe. By downloading, installing, or using the app, you agree to be bound by these terms. If you do not agree, do not use the app.
+    </p>
+  </div>
+
+  <main class="content">
+
+    <section class="section">
+      <h2>Acceptance of Terms</h2>
+      <p>
+        These Terms of Service ("Terms") constitute a legally binding agreement between you ("User," "you," or "your") and DealSafe ("we," "us," or "our") governing your access to and use of the DealSafe mobile application (the "App") and any related services.
+      </p>
+      <p>
+        By creating an account, accessing, or using the App, you acknowledge that you have read, understood, and agree to be bound by these Terms, as well as our <a href="privacy.html">Privacy Policy</a>, which is incorporated herein by reference. If you are using the App on behalf of an organization, you represent and warrant that you have the authority to bind that organization to these Terms.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Description of Service</h2>
+      <p>
+        DealSafe is a mobile application designed to help users evaluate, track, and manage deals and purchases. The App may offer both free and premium features. Premium features are available through a paid subscription as described below.
+      </p>
+      <p>
+        We reserve the right to modify, suspend, or discontinue any part of the App at any time, with or without notice, without liability to you.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Eligibility</h2>
+      <p>
+        You must be at least 13 years of age (or the minimum age required in your jurisdiction) to use the App. If you are under 18, you represent that your parent or legal guardian has reviewed and agreed to these Terms on your behalf. By using the App, you represent and warrant that you meet these eligibility requirements.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Accounts &amp; Security</h2>
+      <p>
+        Certain features of the App may require you to create an account. You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account. You agree to notify us immediately of any unauthorized use of your account.
+      </p>
+      <p>
+        We reserve the right to suspend or terminate your account at our sole discretion if we believe you have violated these Terms or engaged in conduct that is harmful to other users, us, or third parties.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Subscriptions &amp; Billing</h2>
+      <p>
+        DealSafe offers auto-renewable subscription plans that unlock premium features. By purchasing a subscription, you agree to the following terms:
+      </p>
+      <div class="highlight-box">
+        <p><strong>Payment:</strong> Payment will be charged to your Apple ID account at confirmation of purchase. All payments are processed through the Apple App Store. DealSafe does not directly collect or store your payment information.</p>
+        <p><strong>Auto-Renewal:</strong> Your subscription will automatically renew unless auto-renew is turned off at least 24 hours before the end of the current billing period.</p>
+        <p><strong>Renewal Charge:</strong> Your account will be charged for renewal within 24 hours prior to the end of the current period at the cost of your chosen subscription plan.</p>
+        <p><strong>Manage Subscriptions:</strong> You can manage your subscription and turn off auto-renewal at any time by going to your Apple ID Account Settings on your device after purchase.</p>
+        <p><strong>Price Changes:</strong> Subscription prices may change from time to time. You will be notified in advance of any price increase, and your consent will be required if applicable under App Store policies.</p>
+      </div>
+      <p>
+        Subscription options and pricing are displayed within the App at the time of purchase. Prices are in the currency of your App Store region and may vary by location.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Free Trials</h2>
+      <p>
+        DealSafe may offer a free trial period for certain subscription plans. If you begin a free trial, you will not be charged during the trial period. However, if you do not cancel at least 24 hours before the free trial ends, your subscription will automatically convert to a paid subscription and your Apple ID account will be charged.
+      </p>
+      <p>
+        Any unused portion of a free trial period will be forfeited when you purchase a subscription to the same plan. Free trial eligibility is determined by the App Store and may be limited to one trial per Apple ID.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Cancellation &amp; Refunds</h2>
+      <p>
+        You may cancel your subscription at any time through your Apple ID Account Settings. Cancellation will take effect at the end of the current billing period — you will retain access to premium features until that date. No partial refunds are provided for the current billing period upon cancellation.
+      </p>
+      <p>
+        Since all purchases are processed through the Apple App Store, refund requests must be directed to Apple. You can request a refund by visiting <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a> or contacting Apple Support. DealSafe does not have the ability to issue refunds for App Store purchases.
+      </p>
+      <p>
+        You may restore previously purchased subscriptions at any time by using the "Restore Purchases" option available within the App.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>User Conduct</h2>
+      <p>You agree not to:</p>
+      <ul>
+        <li>Use the App for any unlawful purpose or in violation of any applicable laws or regulations.</li>
+        <li>Attempt to reverse-engineer, decompile, disassemble, or otherwise derive the source code of the App.</li>
+        <li>Interfere with or disrupt the integrity, security, or performance of the App or its underlying infrastructure.</li>
+        <li>Use automated means (bots, scrapers, crawlers) to access or collect data from the App without prior written consent.</li>
+        <li>Impersonate any person or entity, or misrepresent your affiliation with a person or entity.</li>
+        <li>Transmit any viruses, malware, or other harmful code through the App.</li>
+      </ul>
+      <p>
+        We reserve the right to take any action we deem necessary if you violate these terms, including termination of your account and access to the App.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Intellectual Property</h2>
+      <p>
+        The App, including all content, features, functionality, design, text, graphics, logos, icons, and software, is the exclusive property of DealSafe and is protected by copyright, trademark, and other intellectual property laws. You are granted a limited, non-exclusive, non-transferable, revocable license to use the App for personal, non-commercial purposes in accordance with these Terms.
+      </p>
+      <p>
+        You may not copy, modify, distribute, sell, lease, or create derivative works based on the App or any of its contents without our prior written consent.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Disclaimers</h2>
+      <p>
+        THE APP IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
+      </p>
+      <p>
+        We do not warrant that the App will be uninterrupted, error-free, or free of viruses or other harmful components. Any information, analysis, or recommendations provided by the App are for informational purposes only and should not be construed as financial, legal, or professional advice. You are solely responsible for any decisions you make based on information obtained through the App.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Limitation of Liability</h2>
+      <p>
+        TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL DEALSAFE, ITS AFFILIATES, DIRECTORS, OFFICERS, EMPLOYEES, OR AGENTS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES, ARISING OUT OF OR IN CONNECTION WITH YOUR ACCESS TO OR USE OF (OR INABILITY TO ACCESS OR USE) THE APP.
+      </p>
+      <p>
+        OUR TOTAL LIABILITY FOR ANY CLAIMS ARISING UNDER THESE TERMS SHALL NOT EXCEED THE AMOUNT YOU PAID TO US, IF ANY, DURING THE TWELVE (12) MONTHS PRECEDING THE CLAIM.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Changes to Terms</h2>
+      <p>
+        We reserve the right to modify or replace these Terms at any time at our sole discretion. If we make material changes, we will notify you by updating the "Effective Date" at the top of this page and, where appropriate, provide additional notice within the App. Your continued use of the App after any changes constitutes your acceptance of the revised Terms.
+      </p>
+      <p>
+        We encourage you to review these Terms periodically to stay informed of any updates.
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <span class="footer-copy">&copy; 2026 DealSafe. All rights reserved.</span>
+  </footer>
+
+</body>
+</html>
