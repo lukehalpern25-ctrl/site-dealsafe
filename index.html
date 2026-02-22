@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DealSafe — Legal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #FAFAF8;
+      --surface: #FFFFFF;
+      --text-primary: #1A1A1A;
+      --text-secondary: #5A5A58;
+      --text-muted: #8A8A86;
+      --accent: #1B6B4A;
+      --accent-light: #E8F5EE;
+      --border: #E8E8E4;
+    }
+
+    html { font-size: 16px; }
+
+    body {
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.7;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      text-align: center;
+      max-width: 400px;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 2rem;
+    }
+
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--accent);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: -0.5px;
+    }
+
+    .logo-text {
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: 1.5rem;
+      letter-spacing: -0.3px;
+    }
+
+    h1 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.75rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .link-card {
+      display: block;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      text-decoration: none;
+      color: var(--text-primary);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .link-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 4px 12px rgba(27, 107, 74, 0.1);
+    }
+
+    .link-card h2 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .link-card p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .footer {
+      margin-top: 3rem;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="logo">
+      <div class="logo-icon">DS</div>
+      <span class="logo-text">DealSafe</span>
+    </div>
+
+    <h1>Legal</h1>
+    <p class="subtitle">Review our policies and terms</p>
+
+    <div class="links">
+      <a href="terms.html" class="link-card">
+        <h2>Terms of Service</h2>
+        <p>Rules and guidelines for using DealSafe</p>
+      </a>
+      <a href="privacy.html" class="link-card">
+        <h2>Privacy Policy</h2>
+        <p>How we collect and protect your data</p>
+      </a>
+    </div>
+
+    <p class="footer">&copy; 2026 DealSafe. All rights reserved.</p>
+  </div>
+
+</body>
+</html>
