@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DealSafe — Support</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #FAFAF8;
+      --surface: #FFFFFF;
+      --text-primary: #1A1A1A;
+      --text-secondary: #5A5A58;
+      --text-muted: #8A8A86;
+      --accent: #1B6B4A;
+      --accent-light: #E8F5EE;
+      --border: #E8E8E4;
+    }
+
+    html { font-size: 16px; scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 1.25rem 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+      background: rgba(255,255,255,0.92);
+    }
+
+    .header-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-decoration: none;
+      color: var(--text-primary);
+    }
+
+    .logo-icon {
+      width: 32px;
+      height: 32px;
+      background: var(--accent);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: -0.5px;
+    }
+
+    .logo-text {
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: 1.15rem;
+      letter-spacing: -0.3px;
+    }
+
+    .header-badge {
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      background: var(--bg);
+      padding: 0.3rem 0.65rem;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+    }
+
+    .hero {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 3.5rem 1.5rem 2.5rem;
+    }
+
+    .hero h1 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(2rem, 5vw, 2.75rem);
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+    }
+
+    .hero .intro {
+      margin-top: 1.25rem;
+      font-size: 1.02rem;
+      color: var(--text-secondary);
+      max-width: 580px;
+      line-height: 1.75;
+    }
+
+    .content {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 1.5rem 4rem;
+    }
+
+    .section {
+      margin-bottom: 2.5rem;
+    }
+
+    .section h2 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      letter-spacing: -0.2px;
+      color: var(--text-primary);
+      margin-bottom: 0.9rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section p {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      margin-bottom: 0.9rem;
+      line-height: 1.75;
+    }
+
+    .section ul {
+      list-style: none;
+      margin: 0.75rem 0 1rem;
+      padding: 0;
+    }
+
+    .section ul li {
+      position: relative;
+      padding-left: 1.4rem;
+      margin-bottom: 0.55rem;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.65;
+    }
+
+    .section ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.6rem;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--accent);
+      opacity: 0.5;
+    }
+
+    .highlight-box {
+      background: var(--accent-light);
+      border: 1px solid #C4E2D2;
+      border-left: 3px solid var(--accent);
+      border-radius: 8px;
+      padding: 1.25rem 1.5rem;
+      margin: 1.25rem 0;
+    }
+
+    .highlight-box p {
+      color: var(--text-primary);
+      font-weight: 500;
+      font-size: 0.92rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .highlight-box p:last-child { margin-bottom: 0; }
+    .highlight-box strong { color: var(--accent); }
+
+    .contact-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 1.25rem 0;
+      text-align: center;
+    }
+
+    .contact-card .email-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-card .email {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .contact-card .email a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .contact-card .email a:hover {
+      text-decoration: underline;
+    }
+
+    .links-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 1.25rem 0;
+    }
+
+    .link-card {
+      display: block;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.15rem 1.25rem;
+      text-decoration: none;
+      color: var(--text-primary);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .link-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 4px 12px rgba(27, 107, 74, 0.1);
+    }
+
+    .link-card h3 {
+      font-family: 'Fraunces', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .link-card p {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 0;
+    }
+
+    .footer {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 3rem;
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .footer-copy {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .section a { color: var(--accent); }
+
+    @media (max-width: 480px) {
+      .hero { padding-top: 2.5rem; }
+      .hero h1 { font-size: 1.75rem; }
+      .section h2 { font-size: 1.15rem; }
+      .highlight-box { padding: 1rem 1.15rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">DS</div>
+        <span class="logo-text">DealSafe</span>
+      </a>
+      <span class="header-badge">Support</span>
+    </div>
+  </header>
+
+  <div class="hero">
+    <h1>Support</h1>
+    <p class="intro">
+      Need help with DealSafe? Find answers to common questions below or reach out to our support team.
+    </p>
+  </div>
+
+  <main class="content">
+
+    <section class="section">
+      <h2>Contact Us</h2>
+      <p>
+        Have a question, issue, or feedback? We're here to help. Reach out to our support team and we'll get back to you as soon as possible.
+      </p>
+      <div class="contact-card">
+        <p class="email-label">Email Support</p>
+        <p class="email"><a href="mailto:dealsafeapp@gmail.com">dealsafeapp@gmail.com</a></p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>How to Cancel Your Subscription</h2>
+      <p>
+        DealSafe subscriptions are managed through your Apple ID. To cancel your subscription, follow these steps:
+      </p>
+      <div class="highlight-box">
+        <p><strong>Step 1:</strong> Open the <strong>Settings</strong> app on your iPhone or iPad.</p>
+        <p><strong>Step 2:</strong> Tap your name at the top to access your Apple ID.</p>
+        <p><strong>Step 3:</strong> Tap <strong>Subscriptions</strong>.</p>
+        <p><strong>Step 4:</strong> Find and tap <strong>DealSafe</strong> in your list of subscriptions.</p>
+        <p><strong>Step 5:</strong> Tap <strong>Cancel Subscription</strong> and confirm.</p>
+      </div>
+      <p>
+        Your subscription will remain active until the end of your current billing period. After cancellation, you will not be charged again, but you will lose access to premium features when the period ends.
+      </p>
+      <p>
+        For refund requests, please visit <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a> or contact Apple Support directly, as all payments are processed through the App Store.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>About DealSafe</h2>
+      <p>
+        DealSafe is a mobile application designed to help you evaluate, track, and manage deals and purchases. We provide tools to help you make smarter buying decisions and never miss a great deal.
+      </p>
+      <p>
+        DealSafe offers both free and premium features. Premium subscriptions unlock additional functionality and are billed through the Apple App Store.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Your Privacy &amp; Our Terms</h2>
+      <p>
+        We're committed to protecting your privacy and being transparent about how we operate. Here's a quick summary:
+      </p>
+      <ul>
+        <li><strong>We don't sell your data.</strong> Your personal information is never sold to third parties.</li>
+        <li><strong>We don't track you across apps.</strong> We don't use cross-app tracking for advertising.</li>
+        <li><strong>Minimal data collection.</strong> We only collect what's necessary to provide and improve the App.</li>
+        <li><strong>You're in control.</strong> You can request access to, correction of, or deletion of your data at any time.</li>
+        <li><strong>Secure by design.</strong> We use encryption and industry-standard security practices to protect your information.</li>
+      </ul>
+      <p>
+        For full details, please review our legal documents:
+      </p>
+      <div class="links-grid">
+        <a href="terms.html" class="link-card">
+          <h3>Terms of Service</h3>
+          <p>Rules for using DealSafe</p>
+        </a>
+        <a href="privacy.html" class="link-card">
+          <h3>Privacy Policy</h3>
+          <p>How we handle your data</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Frequently Asked Questions</h2>
+
+      <p><strong>How do I restore my purchase?</strong></p>
+      <p>
+        Open DealSafe, go to Settings, and tap "Restore Purchases." This will restore any active subscriptions linked to your Apple ID.
+      </p>
+
+      <p><strong>I was charged but don't have premium access. What do I do?</strong></p>
+      <p>
+        First, try restoring your purchase (see above). If that doesn't work, contact us at <a href="mailto:dealsafeapp@gmail.com">dealsafeapp@gmail.com</a> with your Apple ID email and we'll help resolve the issue.
+      </p>
+
+      <p><strong>How do I delete my account?</strong></p>
+      <p>
+        You can delete your account from within the App's settings, or by emailing us at <a href="mailto:dealsafeapp@gmail.com">dealsafeapp@gmail.com</a> with the subject line "Account Deletion Request."
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <span class="footer-copy">&copy; 2026 DealSafe. All rights reserved.</span>
+  </footer>
+
+</body>
+</html>
